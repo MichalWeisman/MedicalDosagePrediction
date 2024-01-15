@@ -27,9 +27,9 @@ The model uses a Two-Step-Regression approach:
 2. **Second Step:** A regression model predicts medication dosage only for positively classified instances. For negatively classified instances, the model returns a value of zero. This distinction is crucial for predicting non-treatment, ensuring that when no treatment is warranted, the returned value is precisely zero, not just a value very close to zero to prevent a false positive rate (FPR) of 1.0.
 
 Each model evaluation consists of three training strategies (configurations). Each strategy defines the data on which the second step (the regression model) will be trained on:
-5. 'all' - Use all data.
-6. 'two_step_pos' - Use only positive training data.
-7. 'two_step_pos_classified' - Use only data which was positively classified in the first step.
+1. 'all' - Use all data.
+2. 'two_step_pos' - Use only positive training data.
+3. 'two_step_pos_classified' - Use only data which was positively classified in the first step.
 
 ## Output
 Two evaluation tables are saved in a CSV file for each parameter value within each medical domain:
